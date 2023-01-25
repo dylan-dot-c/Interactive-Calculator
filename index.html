@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<html lang='en' data-theme = "light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Calculator</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css" type = "text/css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+
+    </head>
+    <body>
+        <div class="container">
+            <div class="calculator">
+                <section class="top-btns">
+                    <div>
+                        <input type="checkbox" name="" id="mode">
+                        <label for="mode">
+    
+                            <div class="slide">
+                                <div class="slider"></div>
+                            </div>
+                        </label>
+                    </div>
+                    <span id="showHistory"> <i class="fa-regular fa-clock"></i> </span>
+                </section>
+                <div class="calc-top">
+                    
+                    <input type="textview" maxlength="10"  id="expression"  disabled>
+                    <input type="textview" id="answer" disabled>
+
+                </div>
+                <div class="calc-buttons">
+                    
+                    <button  class="utility cl" id="clear" onclick="empty()">AC</button>
+                    <button onclick="insert('(')" data-input="(" class="utility br" id="open-br">(</button>
+                    <button onclick="insert(')')" data-input=")" class="utility br" id="close-br">)</button>
+                    <button class="utility cl" id="back" onclick="remove()"><i class="fa-solid fa-delete-left"></i></button>
+
+                    <button onclick="insert('7')" data-input="7" class="number" id="7">7</button>
+                    <button onclick="insert('8')" data-input="8" class="number" id="8">8</button>
+                    <button onclick="insert('9')" data-input="9"class="number" id="9">9</button>
+                    <button onclick="insert('+')" class="operation" id="plus" ><i class="fa fa-plus"></i></button>
+
+                    <button onclick="insert('4')" class="number" id="4">4</button>
+                    <button onclick="insert('5')" class="number" id="5">5</button>
+                    <button onclick="insert('6')" class="number" id="6">6</button>
+                    <button onclick="insert('-')" class="operation" id="minus"><i class="fa fa-minus"></i></button>
+
+                    <button onclick="insert('1')" class="number" id="1">1</button>
+                    <button onclick="insert('2')" class="number" id="2">2</button>
+                    <button onclick="insert('3')" class="number" id="3">3</button>
+                    <button onclick="insert('/')" class="operation" id="divide" >&divide;</button>
+
+                    
+                    <button onclick="insert('.')" class="number" id=".">.</button>
+                    <button onclick="insert('0')" class="number" id="0">0</button>
+                    <button class="result" id="equal" onclick="calc()">&equals;</button>
+                    
+                    <button onclick="insert('*')" class="operation" id="multiply"><i class="fa fa-asterisk"></i></button>
+                </div>
+
+                <div id="history">
+                        
+                </div>
+                <div id="history">
+                        
+                </div>
+            </div>
+                
+            </div>
+        </div>
+        <script src="script.js">
+
+        </script>
+    </body>
+    </html>
